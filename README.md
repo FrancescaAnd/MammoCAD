@@ -174,12 +174,13 @@ The training results will be saved in `runs/segment/` directory
 
 
 
-
 ### Running the Super Resolution GAN system
-- For creating high-resolution and low-resolution pairs, run the following command
+- For creating high-resolution and low-resolution pairs and then split the dataset in *train, val* and *test* sets, run the following command
  ```shell
-    python utils/esrgan_data.py
+    python main_esrgan.py --task split --data clahe
  ```
+It is possible to use the augmented dataset *with or without the CLAHE enhancement* also at this stage.\
+As before, to specify which version of the dataset to use, include either `clahe` or `augmented` as part of the `--data` argument in the Python command.
 
 - For training the ESRGAN, run the following command
  ```shell
