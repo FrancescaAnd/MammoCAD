@@ -105,31 +105,59 @@ Specifically, it generates:
 
 ### Running the CAD system
 
-#### 1. Detection and instance segmentation stages (YOLO v8)
-Once you have everything ready, we can start to train the system.
-- For training the detection system, use the following command:
+Once you have everything ready, we can start to run the system.
+For detection and instance segmentation stages, the system uses the pre-trained YOLOv8 (initialized with pretrained weights from COCO dataset), which is 
+then fine-tuned on the mammography dataset.
+
+#### 1. Detection stage (YOLOv8)
+
+- First of all, the dataset labels must be structured to be compatible with the YOLOv8 model configured for object detection.
+\
+Additionally, the dataset should be split into training, validation, and test sets to properly train and evaluate the YOLOv8 model.\
+For these purposes, run the `main_det.py` script as follows
+     ```shell
+      python main_det.py --mode split --data clahe
+     ```
+  As show in the above command, it is possible to choose to perform detection task using the augmented dataset *with or without the CLAHE enhancement*.\
+  To specify which version of the dataset to use, include either `clahe` or `augmented` as part of the `--data` argument in the Python command.
+
+
+- For training the detection system, use the following command
     ```shell
-    python main_det.py --model yolov8n.pt --epochs 80 --batch 8 
-    ```
-    For testing the system, you can choose to use either one of the different pre-trained versions of the YOLOv8 model: 
+      python main_det.py --mode train --model yolov8m.pt --epochs 70 --batch 4
+     ```
+    Another choice is related on which pre-trained version of the Yolov8 model you want to train, which could be either `yolov8n.pt`, `yolov8s.pt` or `yolov8m.pt`.
+
+    The epochs and batch size are also configurable, thus they can be adjusted based on the computational resources available, 
+such as the GPU capabilities and overall system performance. 
+
+The training results will be saved in `runs/detect/` directory
+ 
+#### 2. Instance Segmentation stage (YOLOv8)
+
+- As in detection stage, the dataset labels must be structured to be compatible with the YOLOv8 model, which is configured now for instance segmentation.
+\
+Additionally, the dataset should be split into training, validation, and test sets to properly train and evaluate the YOLOv8 model.\
+For these purposes, run the `main_seg.py` script as follows
+     ```shell
+      python main_seg.py --mode split --data clahe
+     ```
+  As for detection, it is possible to choose to perform mass segmentation task using the augmented dataset *with or without the CLAHE enhancement*.\
+  To specify which version of the dataset to use, include either `clahe` or `augmented` as part of the `--data` argument in the Python command.
+
+
+- For training the mass segmentation system, use the following command
+    ```shell
+      python main_seg.py --mode train --model yolov8m_seg.pt --epochs 80 --batch 4
+     ```
     
-    *yolov8n.pt*, *yolov8s.pt*, yolov8m.pt
+    The pre-trained version of the Yolov8 model can be selected among either `yolov8n_seg.pt`, `yolov8s_seg.pt` or `yolov8m_seg.pt`.
 
 
-- For training the instance segmentation system, use the following command:
-   ```shell
-      python main_seg.py --model yolov8n_seg.pt --epochs 80 --batch 8 
-   ```
+The training results will be saved in `runs/segment/` directory
 
-    For testing the system, you can choose to use either one of the different pre-trained versions of the YOLOv8 model for segmentation: 
-    
-    *yolov8n_seg.pt*, *yolov8s_seg.pt*, yolov8m_seg.pt
-    
-    
 
-The results will be saved in `runs/` directory
-
-#### 2. Classification stage (ResNet)
+#### 2. Classification stage (modified ResNet)
 
 - First, we have to split the dataset in *train, val* and *test* sets, running the following command
     ```shell
@@ -143,6 +171,7 @@ The results will be saved in `runs/` directory
     ```shell
     python main_class.py --mode eval --json_path data/json/class/val.json --img_dir data/processed/clahePNG --mask_dir data/mass_masks --epochs 80
     ```
+
 
 
 
