@@ -41,19 +41,17 @@ TO PUT image of the table with results compared between different versions of mo
 
 
 ## 3. How to use
-It is needed a working Python environment to run the code.
-We use conda virtual environments to manage the project dependencies 
-in isolation. You can install our dependencies without causing 
-conflicts with your setup.
+This project is implemented on a *Linux-based operating system* (Ubuntu 22.04.5 LTS, 64-bit)
+It is needed a working Python environment to run the code. 
+
+Thus, It is recommended to create a Conda environment for this purpose.
+
 
 ### Requirements
 As first step, please install the dependencies needed for running the system.
-Recomended: use a virtual environment conda
-
 ```shell
 pip install -r requirements.txt
 ```
-or sh with also conda????????????
 
 ### Data collection 
 INbreast dataset is publicly avaiable at this link: https://www.kaggle.com/datasets/ramanathansp20/inbreast-dataset .
@@ -83,37 +81,26 @@ The *data* directory should have the following structure:
 ```
 
 ### Data preprocessing
-1. To preprocess the dataset, run the script *dataset_preparation* which provides the conversion
-of DICOM images into PNG images, which are then augmented and enhanced by applying **CLAHE** *(Contrast Limited Adaptive Histogram Equalization)*. 
-It creates also the JSON file containing all the information related to the images.
-Specifically, *json_preparation.py* script extracts and saves the information from both XML files and CSV annotations in a structured JSON format.
+To preprocess the dataset, go to *data/* directory and run dataset_preparation.py script. 
+This step can be done running consequently the following commands
+```shell
+    cd data
+    python dataset_preparation.py
+```
+   And then come back to the main directory
 
-    ```shell
-    python data/dataset_preparation.py
-    ```
-   
-    After running the script, the directory should have the following structure:
-    After running the script, the directory should have the following structure:
-   In particular for detection, Point_px data will be used. 
-   It is a list of points in pixel space, representing contour points of the masses.
+```shell 
+    cd -
+```
+After the execution of this preprocessing step, the PNG processed images results to be located in `data/processed/` directory, while the JSON files are located in `data/json/` directory.
 
-2. To generate the labels for detection and segmentation stage, run the following two scripts:
-   ```shell
+Specifically, it generates:
+- the converted version of INbreast images from DICOM to PNG format (*`AllPNG`*)
+- the augmented version of the dataset (augmentations: contrast adjustment, noise addition) in PNG format (*`augmentedPNG`*)
+- the previous augmented version of the dataset enhanced using **CLAHE** (Contrast Limited Adaptive Histogram Equalization) (*`clahePNG`*)
+- the file JSON containing a dictionary with information from INbreast.csv and from the annotations in XML format (*`dataset.json`*)
+- the file JSON containing a dictionary with information from INbreast.csv and from the annotations in XML format for the augmented dataset (*`augmented.json`*)
 
-   ```
-
-3. To split the dataset into train, val, and test sets for detection and segmentation models training, 
-   run the following script
-
-   ```shell
-       python data/split_dataset.py
-   ```
-4. To generate the binary masks from the original dataset, for testing classification directly without using results from
-segmentation, run the following command
-5. 
-   ```shell
-      python utils/extract_masks.py
-   ```
 
 ### Running the CAD system
 
