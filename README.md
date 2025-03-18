@@ -16,7 +16,8 @@ This is the repository for the implementation of a complete Computer-Aided Detec
 - GAN-based super-resolution and synthetic image generation over the dataset
 
 ### Abstract
-...
+This project presents a Computer-Aided Diagnosis (CAD) system for mammogram analysis that integrates deep learning techniques for image enhancement, mass detection, segmentation, classification. The system is trained and evaluated on the INBreast dataset, that due to its high-resolution images and detailed ground truth annotations, is a particular suitable mammographic database for this purpose. Our proposed pipeline starts from some pre-processing that includes data augmentation techniques, such as contrast enhancement and noise addition, and the utilization of an ESRGAN for image enhancement and synthetic data generation, in order to improve model robustness. Successively it exploits a YOLOv8-based mass detection and instance segmentation model and a ResNet-based classifier to differentiate between benign and malignant masses. 
+RESULTS
 
 
 ### Dataset
