@@ -41,8 +41,8 @@ TO PUT image of the table with results compared between different versions of mo
 
 
 ## 3. How to use
-This project is implemented on a *Linux-based operating system* (Ubuntu 22.04.5 LTS, 64-bit)
-It is needed a working Python environment to run the code. 
+This project is implemented on a *Linux-based operating system* (Ubuntu 22.04.5 LTS, 64-bit).
+A working Python environment is needed to run the code. 
 
 Thus, It is recommended to create a Conda environment for this purpose.
 
