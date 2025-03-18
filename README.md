@@ -1,6 +1,6 @@
 # *Mammography CAD system*
 AI-powered mammography image processing pipeline for mass detection, segmentation,
-classification, and enhancement using deep learning.
+classification, and enhancement using deep learning. 
 
 ## Table of Contents
 1. [About the project](#1-about-the-project)
@@ -28,10 +28,10 @@ Each image is expert-annotated with regions of interest (ROIs), which are labele
 or spiculated regions.
 The dataset provides both:
 - annotations related to ROIs of each image (including lesion properties such as size, intensity statistics, and contour
-points in pixel and millimeter spaces), avaiable in XML format.
+points in pixel and millimeter spaces), available in XML format.
 - metadata (e.g., BIRADs class) in CSV format.
 
-The high-quality annotations and comprehensive lesion diversity made 
+The high-quality annotations and comprehensive lesion diversity made the
 INbreast dataset particularly suitable for our system tasks.
 
 ## 2. Experiment results
@@ -45,11 +45,11 @@ TO PUT image of the table with results compared between different versions of mo
 This project is implemented on a *Linux-based operating system* (Ubuntu 22.04.5 LTS, 64-bit).
 A working Python environment is needed to run the code. 
 
-Thus, It is recommended to create a Conda environment for this purpose.
+Thus, it is recommended to create a Conda environment for this purpose.
 
 
 ### Requirements
-As first step, please install the dependencies needed for running the system.
+As first step, please install the dependencies needed to run the system.
 ```shell
 pip install -r requirements.txt
 ```
@@ -83,7 +83,7 @@ The *data* directory should have the following structure:
 
 ### Data preprocessing
 To preprocess the dataset, go to *data/* directory and run dataset_preparation.py script. 
-This step can be done running consequently the following commands
+This step can be executed by running consequently the following commands
 ```shell
     cd data
     python dataset_preparation.py
@@ -93,7 +93,7 @@ This step can be done running consequently the following commands
 ```shell 
     cd -
 ```
-After the execution of this preprocessing step, the PNG processed images results to be located in `data/processed/` directory, while the JSON files are located in `data/json/` directory.
+Once the preprocessing step is completed, the PNG processed images results to be located in `data/processed/` directory, while the JSON files are located in `data/json/` directory.
 
 Specifically, it generates:
 - the converted version of INbreast images from DICOM to PNG format (*`AllPNG`*)
@@ -105,13 +105,13 @@ Specifically, it generates:
 
 ### Running the CAD system
 
-Once you have everything ready, we can start to run the system.
+Once everything is set, we can start to run the system.
 For detection and instance segmentation stages, the system uses the pre-trained YOLOv8 (initialized with pretrained weights from COCO dataset), which is 
 then fine-tuned on the mammography dataset.
 
 #### 1. Detection stage (YOLOv8)
 
-- First of all, the dataset labels must be structured to be compatible with the YOLOv8 model configured for object detection.
+- First of all, the dataset labels must be structured to ensure compatibility with the YOLOv8 model configured for object detection.
 \
 Additionally, the dataset should be split into training, validation, and test sets to properly train and evaluate the YOLOv8 model.\
 For these purposes, run the `main_det.py` script as follows
@@ -175,7 +175,7 @@ The training results will be saved in `runs/segment/` directory
 
 
 ### Running the Super Resolution GAN system
-- For creating high-resolution and low-resolution pairs and then split the dataset in *train, val* and *test* sets, run the following command
+- To create high-resolution and low-resolution pairs and then split the dataset in *train, val* and *test* sets, run the following command
  ```shell
     python main_esrgan.py --task split --data clahe
  ```
