@@ -47,7 +47,9 @@ TO PUT image of the table with results compared between different versions of mo
 
 ### Detection
 
-![result1](results/detection/F1_curve_medium_clahe.png)
+![clahe_small_F1](results/detection/F1_curve_small_clahe.png) ![clahe_small_P_curve](results/detection/P_curve_small_clahe.png)  ![clahe_small_R_curve](results/detection/R_curve_small_clahe.png)
+![clahe_medium_F1](results/detection/F1_curve_medium_clahe.png) ![clahe_medium_P_curve](results/detection/P_curve_medium_clahe.png) ![clahe_medium_R_curve](results/detection/R_curve_medium_clahe.png)
+
 
 
 
