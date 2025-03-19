@@ -9,16 +9,14 @@ classification, and enhancement using deep learning.
 
 
 ## 1. About the project
-This is the repository for the implementation of a complete Computer-Aided Detection and Diagnosis (CADe/CADx) system for mammogram analysis. 
+This system is designed to assist through future improvements in the automatic analysis of mammography images, implementing a Computer-Aided Detection and Diagnosis system.\
+The three main tasks are described below:
 
-It implements:
-- A mass detection stage, performed through YOLOv8 model
-- An instance segmentation stage, performed throug YOLOv8-seg model
-- A ResNEt-based classification
-
-Developed for future pre-processing:
-- GAN-based super-resolution
-
+1. *Mass Detection (performed through YOLOv8)*
+2. *Mass Instance Segmentation (performed through YOLOv8)*
+3. *Mass Classification (Modified ResNet with binary input)*
+4. *Super-Resolution (ESRGAN)*
+   
 ### Abstract
 This project presents a Computer-Aided Detection and Diagnosis (CADe/CADx) system for mammogram analysis that integrates deep learning techniques for mass detection, segmentation and classification.  The system is trained and evaluated on the INBreast dataset which is particularly suitable for this purpose due to its high-resolution images and detailed ground truth annotations. Our proposed pipeline begins with a pre-processing stage in order to improve model robustness, this includes data augmentation techniques such as contrast enhancement, noise addition and CLAHE. Successively it exploits a YOLOv8-based mass detection and instance segmentation model and a ResNet-based classifier to differentiate between benign and malignant masses. An Enhanced Super-Resolution GAN (ESRGAN) was also implemented with the goal of improving fine detail preservation, which is crucial for detection, segmentation, and classification. While ESRGAN is not currently integrated into our CADe/CADx system, future iterations may explore its use as a pre-processing step to further improve performance.
 
@@ -90,6 +88,9 @@ This is an example of the prediction output of our segmentation model (per insta
   <img src="github/segmentation/clahe_seg_med_val_batch0_pred.jpg" width="450"/>
   <img src="github/segmentation/clahe_seg_med_val_batch0_labels.jpg" width="450"/>
 </p>
+
+### Detection and segmentation models evaluation
+An example of output deriving from the evaluation on test sets either on detection and segmentation is provided in the `det_seg_test_results/` directory (`val_det`, `valseg` respectively)
 
 ### Classification
 Test set evaluation:
