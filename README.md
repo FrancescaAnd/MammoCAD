@@ -1,4 +1,4 @@
-# *Mammography CAD system*
+# *CAD System for Mammography: Detection, Segmentation, Classification, and Super-Resolution Enhancement*
 AI-powered mammography image processing pipeline for mass detection, segmentation,
 classification, and enhancement using deep learning. 
 
