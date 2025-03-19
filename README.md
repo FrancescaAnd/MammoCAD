@@ -9,14 +9,18 @@ classification, and enhancement using deep learning.
 
 
 ## 1. About the project
-This is the repository for the implementation of a complete Computer-Aided Detection (CAD) system for mammogram analysis, integrating: 
-- A mass detection stage, performed through YoloV8 model
-- An instance segmentation stage
-- A ResNEt-based classification 
+This is the repository for the implementation of a complete Computer-Aided Detection and Diagnosis (CADe/CADx) system for mammogram analysis.
+
+The CAD pipeline follows this structure:
+- A mass detection stage, performed through YOLOv8 model
+- An instance segmentation stage, performed throug YOLOv8-seg model
+- A ResNEt-based classification
+
+Developed for future pre-processing:
 - GAN-based super-resolution
 
 ### Abstract
-This project presents a Computer-Aided Detection and Diagnosis (CADe/CADx) system for mammogram analysis that integrates deep learning techniques for image enhancement, mass detection, segmentation, classification. The system is trained and evaluated on the INBreast dataset which is particularly suitable for this purpose due to its high-resolution images and detailed ground truth annotations. Our proposed pipeline begins with a pre-processing stage in order to improve model robustness, this includes data augmentation techniques such as contrast enhancement, noise addition and CLAHE(?), and the use of an ESRGAN for image enhancement. Successively it exploits a YOLOv8-based mass detection and instance segmentation model and a ResNet-based classifier to differentiate between benign and malignant masses. 
+This project presents a Computer-Aided Detection and Diagnosis (CADe/CADx) system for mammogram analysis that integrates deep learning techniques for image enhancement, mass detection, segmentation, classification. The system is trained and evaluated on the INBreast dataset which is particularly suitable for this purpose due to its high-resolution images and detailed ground truth annotations. Our proposed pipeline begins with a pre-processing stage in order to improve model robustness, this includes data augmentation techniques such as contrast enhancement, noise addition and CLAHE(?). Successively it exploits a YOLOv8-based mass detection and instance segmentation model and a ResNet-based classifier to differentiate between benign and malignant masses. An Enhanced Super-Resolution GAN (ESRGAN) was also implemented with the goal of improving fine detail preservation, which is crucial for detection, segmentation, and classification. While ESRGAN is not currently integrated into our CADe/CADx system, future iterations may explore its use as a pre-processing step to further improve performance.
 RESULTS
 
 
