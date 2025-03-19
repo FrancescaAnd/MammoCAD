@@ -48,7 +48,7 @@ TO PUT image of the table with results compared between different versions of mo
 ### Detection
 Here are the normalized confusion matrix, F1 curve, Precision curve, and Recall curve obtained by running respectively YOLOv8.s (Small)and YOLOv8.m (Medium)(s) on the augmented dataset with CLAHE applied
 
-# *YOLOv8.s*
+#### *YOLOv8.s*
 <p>
   <img src="results/detection/clahe_det_small_confusion_matrix_normalized.png" width="500"/>
   <img src="results/detection/F1_curve_small_clahe.png" width="400"/>
@@ -56,7 +56,7 @@ Here are the normalized confusion matrix, F1 curve, Precision curve, and Recall 
   <img src="results/detection/R_curve_small_clahe.png" width="400"/>   
 </p>
 
-# *YOLOv8.m*
+#### *YOLOv8.m*
 
 <p>
   <img src="results/detection/clahe_det_medium_confusion_matrix_normalized.png" width="500"/>
