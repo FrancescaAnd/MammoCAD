@@ -65,7 +65,7 @@ This is an example of the prediction output of our detection model (bounding box
 </p>
 
 ### Segmentation
-Here are the normalized confusion matrix, F1 curve, Precision curve, and Recall curve obtained by running respectively YOLOv8n-seg.pt (Nano)and YOLOv8m-seg.pt (Medium)(s) on the augmented dataset with CLAHE applied
+Here are the normalized confusion matrix, F1 curve, Precision curve, and Recall curve obtained by running respectively YOLOv8n-seg.pt (Nano)and YOLOv8m-seg.pt (Medium) on the augmented dataset with CLAHE applied
 
 #### *YOLOv8n-seg*
 <p>
