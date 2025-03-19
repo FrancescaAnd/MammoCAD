@@ -47,7 +47,7 @@ TO PUT image of the table with results compared between different versions of mo
 
 ### Detection
 
-
+![result1](results/detection/F1_curve_medium_clahe.png)
 
 
 
