@@ -227,8 +227,7 @@ The repository structure should be as follows:
      ...
 
 ```
-- The metrics and weights from the **detection** and **mass segmentation** training are available in the `results_train/` folder and divided with respect on which dataset 
-was used for the training (namely the augmented one with or without CLAHE). 
+- **Detection** and **mass segmentation** training outputs are available in the `results_train/` folder. Unfortunately, due to the file size, the weights of YOLOv8m are not available.
 
 #### 1. Detection stage (YOLOv8)
 
@@ -248,6 +247,10 @@ As shown, it is possible to choose to perform detection task using the augmented
 - For training the detection system, use the following command
     ```shell
       python main_det.py --mode train --model yolov8m.pt --data clahe --data_path "/home/francesca/Desktop" --epochs 70 --batch 4
+     ```
+- For evaluating the system on the test set, use the following command
+     ```shell
+      python main_det.py --mode test --data_path /home/francesca/Desktop/mammography_cad
      ```
     
     **IMPORTANT**: change the `--data_path` accordingly to the directory where you have saved `mammography_cad` directory
@@ -278,6 +281,11 @@ For these purposes, run the `main_seg.py` script as follows
     ```shell
       python main_seg.py --mode train --model yolov8m-seg.pt --data clahe --data_path "/home/francesca/Desktop" --epochs 80 --batch 4    
     ```
+    
+- For evaluating the system on the test set, use the following command
+     ```shell
+      python main_seg.py --mode test --data_path /home/francesca/Desktop/mammography_cad
+     ```
     **IMPORTANT**: change the `--data_path` accordingly to the directory where you have saved `mammography_cad` directory
     
     Please, choose `--data` argument accordingly to the version of the dataset you have used in `split` mode.
