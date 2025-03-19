@@ -46,9 +46,9 @@ TO PUT image of the table with results compared between different versions of mo
 - yolov8m
 
 ### Detection
-Here are the normalized confusion matrix, F1 curve, Precision curve, and Recall curve obtained by running respectively YOLOv8.s (Small)and YOLOv8.m (Medium)(s) on the augmented dataset with CLAHE applied
+Here are the normalized confusion matrix, F1 curve, Precision curve, and Recall curve obtained by running respectively YOLOv8s.pt (Small) and YOLOv8m.pt (Medium) on the augmented dataset with CLAHE applied
 
-#### *YOLOv8.s*
+#### *YOLOv8s*
 <p>
   <img src="results/detection/clahe_det_small_confusion_matrix_normalized.png" width="500"/>
   <img src="results/detection/F1_curve_small_clahe.png" width="400"/>
@@ -56,7 +56,7 @@ Here are the normalized confusion matrix, F1 curve, Precision curve, and Recall 
   <img src="results/detection/R_curve_small_clahe.png" width="400"/>   
 </p>
 
-#### *YOLOv8.m*
+#### *YOLOv8m*
 
 <p>
   <img src="results/detection/clahe_det_medium_confusion_matrix_normalized.png" width="500"/>
@@ -72,7 +72,25 @@ This is an example of the prediction output of our detection model (bounding box
   <img src="results/detection/val_batch0_labels.jpg" width="450"/>
 </p>
 
+### Segmentation
+Here are the normalized confusion matrix, F1 curve, Precision curve, and Recall curve obtained by running respectively YOLOv8n-seg.pt (Nano)and YOLOv8m-seg.pt (Medium)(s) on the augmented dataset with CLAHE applied
 
+#### *YOLOv8n-seg*
+<p>
+  <img src="results/detection/clahe_det_small_confusion_matrix_normalized.png" width="500"/>
+  <img src="results/detection/F1_curve_small_clahe.png" width="400"/>
+  <img src="results/detection/P_curve_small_clahe.png" width="400"/>
+  <img src="results/detection/R_curve_small_clahe.png" width="400"/>   
+</p>
+
+#### *YOLOv8m-seg*
+
+<p>
+  <img src="results/detection/clahe_det_medium_confusion_matrix_normalized.png" width="500"/>
+  <img src="results/detection/F1_curve_medium_clahe.png" width="400"/>
+  <img src="results/detection/P_curve_medium_clahe.png" width="400"/>
+  <img src="results/detection/R_curve_medium_clahe.png" width="400"/>  
+</p>
 
 ## 3. How to use
 This project is implemented on a *Linux-based operating system* (Ubuntu 22.04.5 LTS, 64-bit).
