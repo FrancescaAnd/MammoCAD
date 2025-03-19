@@ -198,8 +198,8 @@ Once you have everything ready, we can start to run the system.
 For detection and instance segmentation stages, the system uses the pre-trained YOLOv8 (initialized with pretrained weights from COCO dataset), which is 
 then fine-tuned on the mammography dataset.
 
-**IMPORTANT**:\
-To test the **classification** and **ESRGAN** models without training, 
+**IMPORTANT**: 
+- To test the **classification** and **ESRGAN** models without training, 
 skip the training commands (but keep the other commands). Place the checkpoint files 
 from the `results/` folder into the `runs/` directory. 
 The repository structure should be as follows:
@@ -222,7 +222,7 @@ The repository structure should be as follows:
      ...
 
 ```
-The metrics and weights from the YOLOv8 training are available in the `results/` folder and divided with respect on which dataset 
+- The metrics and weights from the **detection** and **mass segmentation** training are available in the `results/` folder and divided with respect on which dataset 
 was used for the training (namely the augmented one with or without CLAHE). 
 
 #### 1. Detection stage (YOLOv8)
