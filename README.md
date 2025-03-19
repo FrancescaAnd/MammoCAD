@@ -92,7 +92,7 @@ Here are the normalized confusion matrix, F1 curve, Precision curve, and Recall 
   <img src="results/segmentation/clahe_seg_med_MaskR_curve.png" width="400"/>  
 </p>
 
-This is an example of the prediction output of our detection model (bounding boxes and class probabilities) in comparison to the annotated images already present on the dataset
+This is an example of the prediction output of our segmentation model (per instance masks) in comparison to the annotated images already present on the dataset
 
 <p>
   <img src="results/segmentation/clahe_seg_med_val_batch0_pred.jpg" width="450"/>
