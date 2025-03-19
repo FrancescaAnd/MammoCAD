@@ -46,18 +46,18 @@ TO PUT image of the table with results compared between different versions of mo
 - yolov8m
 
 ### Detection
-<p align="center">
+<p>
   <img src="results/detection/clahe_det_small_confusion_matrix_normalized.png" width="400"/>
-  <img src="results/detection/F1_curve_small_clahe.png" width="200"/>
-  <img src="results/detection/P_curve_small_clahe.png" width="200"/>
-  <img src="results/detection/R_curve_small_clahe.png" width="200"/>   
+  <img src="results/detection/F1_curve_small_clahe.png" width="300"/>
+  <img src="results/detection/P_curve_small_clahe.png" width="300"/>
+  <img src="results/detection/R_curve_small_clahe.png" width="300"/>   
 </p>
 
-<p align="center">
+<p>
   <img src="results/detection/clahe_det_medium_confusion_matrix_normalized.png" width="400"/>
-  <img src="results/detection/F1_curve_small_clahe.png" width="200"/>
-  <img src="results/detection/P_curve_small_clahe.png" width="200"/>
-  <img src="results/detection/R_curve_small_clahe.png" width="200"/>  
+  <img src="results/detection/F1_curve_small_clahe.png" width="300"/>
+  <img src="results/detection/P_curve_small_clahe.png" width="300"/>
+  <img src="results/detection/R_curve_small_clahe.png" width="300"/>  
 </p>
 
 <p align="center">
