@@ -77,19 +77,26 @@ Here are the normalized confusion matrix, F1 curve, Precision curve, and Recall 
 
 #### *YOLOv8n-seg*
 <p>
-  <img src="results/detection/clahe_det_small_confusion_matrix_normalized.png" width="500"/>
-  <img src="results/detection/F1_curve_small_clahe.png" width="400"/>
-  <img src="results/detection/P_curve_small_clahe.png" width="400"/>
-  <img src="results/detection/R_curve_small_clahe.png" width="400"/>   
+  <img src="results/segmentation/clahe_seg_nano_confusion_matrix_normalized.png" width="500"/>
+  <img src="results/segmentation/clahe_seg_nano_MaskF1_curve.png" width="400"/>
+  <img src="results/segmentation/clahe_seg_nano_MaskP_curve.png" width="400"/>
+  <img src="results/segmentation/clahe_seg_nano_MaskR_curve.png" width="400"/>   
 </p>
 
 #### *YOLOv8m-seg*
 
 <p>
-  <img src="results/detection/clahe_det_medium_confusion_matrix_normalized.png" width="500"/>
-  <img src="results/detection/F1_curve_medium_clahe.png" width="400"/>
-  <img src="results/detection/P_curve_medium_clahe.png" width="400"/>
-  <img src="results/detection/R_curve_medium_clahe.png" width="400"/>  
+  <img src="results/segmentation/clahe_seg_med_confusion_matrix_normalized.png" width="500"/>
+  <img src="results/segmentation/clahe_seg_med_MaskF1_curve.png" width="400"/>
+  <img src="results/segmentation/clahe_seg_med_MaskP_curve.png" width="400"/>
+  <img src="results/segmentation/clahe_seg_med_MaskR_curve.png" width="400"/>  
+</p>
+
+This is an example of the prediction output of our detection model (bounding boxes and class probabilities) in comparison to the annotated images already present on the dataset
+
+<p>
+  <img src="results/segmentation/clahe_seg_med_val_batch0_pred.jpg" width="450"/>
+  <img src="results/segmentation/clahe_seg_med_val_batch0_labels.jpg" width="450"/>
 </p>
 
 ## 3. How to use
