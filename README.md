@@ -227,7 +227,8 @@ The repository structure should be as follows:
      ...
 
 ```
-- **Detection** and **mass segmentation** training outputs are available in the `results_train/` folder. Unfortunately, due to the file size, the weights of YOLOv8m are not available.
+- **Detection** and **mass segmentation** training outputs are available in the `results_train/` folder.
+  Unfortunately, due to the fileS size, the weights of YOLOv8m and Yolov8s are not available.
 
 #### 1. Detection stage (YOLOv8)
 
