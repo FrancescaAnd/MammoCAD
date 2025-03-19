@@ -47,12 +47,26 @@ TO PUT image of the table with results compared between different versions of mo
 
 ### Detection
 <p align="center">
+  <img src="results/detection/clahe_det_small_confusion_matrix_normalized.png" width="200"/>
+  <img src="results/detection/clahe_det_medium_confusion_matrix_normalized.png" width="200"/>
+</p>
+
+<p align="center">
   <img src="results/detection/F1_curve_small_clahe.png" width="200"/>
   <img src="results/detection/P_curve_small_clahe.png" width="200"/>
+  <img src="results/detection/R_curve_small_clahe.png" width="200"/>  
 </p>
-![clahe_small_F1](results/detection/F1_curve_small_clahe.png) ![clahe_small_P_curve](results/detection/P_curve_small_clahe.png)  ![clahe_small_R_curve](results/detection/R_curve_small_clahe.png)
-![clahe_medium_F1](results/detection/F1_curve_medium_clahe.png) ![clahe_medium_P_curve](results/detection/P_curve_medium_clahe.png) ![clahe_medium_R_curve](results/detection/R_curve_medium_clahe.png)
 
+<p align="center">
+  <img src="results/detection/F1_curve_medium_clahe.png" width="200"/>
+  <img src="results/detection/P_curve_medium_clahe.png" width="200"/>
+  <img src="results/detection/R_curve_medium_clahe.png" width="200"/>  
+</p>
+
+<p align="center">
+  <img src="results/detection/val_batch0_labels.jpg" width="200"/>
+  <img src="results/detection/val_batch0_pred.jpg" width="200"/>
+</p>
 
 
 
