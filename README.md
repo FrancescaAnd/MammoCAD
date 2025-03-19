@@ -40,10 +40,6 @@ The high-quality annotations and comprehensive lesion diversity made the
 INbreast dataset particularly suitable for our system tasks.
 
 ## 2. Experiment results
-... 
-TO PUT image of the table with results compared between different versions of model
-- yolov8n
-- yolov8m
 
 ### Detection
 Here are the normalized confusion matrix, F1 curve, Precision curve, and Recall curve obtained by running respectively YOLOv8s.pt (Small) and YOLOv8m.pt (Medium) on the augmented dataset with CLAHE applied
