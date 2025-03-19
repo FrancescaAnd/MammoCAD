@@ -9,9 +9,9 @@ classification, and enhancement using deep learning.
 
 
 ## 1. About the project
-This is the repository for the implementation of a complete Computer-Aided Detection and Diagnosis (CADe/CADx) system for mammogram analysis.
+This is the repository for the implementation of a complete Computer-Aided Detection and Diagnosis (CADe/CADx) system for mammogram analysis. 
 
-The CAD pipeline follows this structure:
+It implements:
 - A mass detection stage, performed through YOLOv8 model
 - An instance segmentation stage, performed throug YOLOv8-seg model
 - A ResNEt-based classification
