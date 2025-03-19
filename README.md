@@ -92,11 +92,11 @@ This is an example of the prediction output of our segmentation model (per insta
 </p>
 
 ### Classification
-## Test set evaluation:
+Test set evaluation:
 
 | Metric    | Accuracy | Precision | Recall | F1 Score |
 |-----------|----------|-----------|--------|----------|
-| **Value** | 96.22%   | 96.34%    | 95.18% | 95.76%   |
+| **Value (%)** | 96.22%   | 96.34%    | 95.18% | 95.76%   |
 
 
 ### Image enhancement with ESRGAN
