@@ -23,6 +23,7 @@ Developed for future pre-processing:
 This project presents a Computer-Aided Detection and Diagnosis (CADe/CADx) system for mammogram analysis that integrates deep learning techniques for image enhancement, mass detection, segmentation, classification. The system is trained and evaluated on the INBreast dataset which is particularly suitable for this purpose due to its high-resolution images and detailed ground truth annotations. Our proposed pipeline begins with a pre-processing stage in order to improve model robustness, this includes data augmentation techniques such as contrast enhancement, noise addition and CLAHE(?). Successively it exploits a YOLOv8-based mass detection and instance segmentation model and a ResNet-based classifier to differentiate between benign and malignant masses. An Enhanced Super-Resolution GAN (ESRGAN) was also implemented with the goal of improving fine detail preservation, which is crucial for detection, segmentation, and classification. While ESRGAN is not currently integrated into our CADe/CADx system, future iterations may explore its use as a pre-processing step to further improve performance.
 RESULTS
 
+Undoubtedly, employing a larger model and modifying the epochs and batch, would have been beneficial. However, our computational resources were limited, making this approach unfeasible.
 
 ### Dataset
 The dataset we are using is *INBreast*.
@@ -43,6 +44,11 @@ INbreast dataset particularly suitable for our system tasks.
 TO PUT image of the table with results compared between different versions of model
 - yolov8n
 - yolov8m
+
+### Detection
+
+
+
 
 
 ## 3. How to use
