@@ -37,7 +37,7 @@ INbreast dataset particularly suitable for our system tasks.
 ## 2. Experiment results
 
 ### Detection
-Here are the normalized confusion matrix, F1 curve, Precision curve, and Recall curve obtained by running respectively YOLOv8s.pt (Small) and YOLOv8m.pt (Medium) on the augmented dataset with CLAHE applied
+Here are the normalized confusion matrix, F1 curve, Precision curve, and Recall curve obtained by running respectively YOLOv8s.pt (Small) and YOLOv8m.pt (Medium) fine-tuned on the augmented dataset with CLAHE
 
 #### *YOLOv8s*
 <p>
@@ -63,7 +63,7 @@ This is an example of the prediction output of our detection model (bounding box
 </p>
 
 ### Segmentation
-Here are the normalized confusion matrix, F1 curve, Precision curve, and Recall curve obtained by running respectively YOLOv8n-seg.pt (Nano)and YOLOv8m-seg.pt (Medium) on the augmented dataset with CLAHE applied
+Here are the normalized confusion matrix, F1 curve, Precision curve, and Recall curve obtained by running respectively YOLOv8n-seg.pt (Nano)and YOLOv8m-seg.pt (Medium) fine-tuned on the augmented dataset with CLAHE
 
 #### *YOLOv8n-seg*
 <p>
