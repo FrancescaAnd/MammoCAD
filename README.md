@@ -20,7 +20,7 @@ Developed for future pre-processing:
 - GAN-based super-resolution
 
 ### Abstract
-This project presents a Computer-Aided Detection and Diagnosis (CADe/CADx) system for mammogram analysis that integrates deep learning techniques for image enhancement, mass detection, segmentation, classification. The system is trained and evaluated on the INBreast dataset which is particularly suitable for this purpose due to its high-resolution images and detailed ground truth annotations. Our proposed pipeline begins with a pre-processing stage in order to improve model robustness, this includes data augmentation techniques such as contrast enhancement, noise addition and CLAHE(?). Successively it exploits a YOLOv8-based mass detection and instance segmentation model and a ResNet-based classifier to differentiate between benign and malignant masses. An Enhanced Super-Resolution GAN (ESRGAN) was also implemented with the goal of improving fine detail preservation, which is crucial for detection, segmentation, and classification. While ESRGAN is not currently integrated into our CADe/CADx system, future iterations may explore its use as a pre-processing step to further improve performance.
+This project presents a Computer-Aided Detection and Diagnosis (CADe/CADx) system for mammogram analysis that integrates deep learning techniques for image enhancement, mass detection, segmentation, classification. The system is trained and evaluated on the INBreast dataset which is particularly suitable for this purpose due to its high-resolution images and detailed ground truth annotations. Our proposed pipeline begins with a pre-processing stage in order to improve model robustness, this includes data augmentation techniques such as contrast enhancement, noise addition and CLAHE. Successively it exploits a YOLOv8-based mass detection and instance segmentation model and a ResNet-based classifier to differentiate between benign and malignant masses. An Enhanced Super-Resolution GAN (ESRGAN) was also implemented with the goal of improving fine detail preservation, which is crucial for detection, segmentation, and classification. While ESRGAN is not currently integrated into our CADe/CADx system, future iterations may explore its use as a pre-processing step to further improve performance.
 RESULTS
 
 Undoubtedly, employing a larger model and modifying the epochs and batch, would have been beneficial. However, our computational resources were limited, making this approach unfeasible.
@@ -46,25 +46,25 @@ TO PUT image of the table with results compared between different versions of mo
 - yolov8m
 
 ### Detection
+Here are the normalized confusion matrix, F1 curve, Precision curve, and Recall curve obtained by running respectively YOLOv8.s (Small)and YOLOv8.m (Medium)(s) on the augmented dataset with CLAHE applied
+
+YOLOv8.s
 <p>
-  <img src="results/detection/clahe_det_small_confusion_matrix_normalized.png" width="400"/>
-  <img src="results/detection/F1_curve_small_clahe.png" width="300"/>
-  <img src="results/detection/P_curve_small_clahe.png" width="300"/>
-  <img src="results/detection/R_curve_small_clahe.png" width="300"/>   
+  <img src="results/detection/clahe_det_small_confusion_matrix_normalized.png" width="500"/>
+  <img src="results/detection/F1_curve_small_clahe.png" width="400"/>
+  <img src="results/detection/P_curve_small_clahe.png" width="400"/>
+  <img src="results/detection/R_curve_small_clahe.png" width="400"/>   
 </p>
 
-<p>
-  <img src="results/detection/clahe_det_medium_confusion_matrix_normalized.png" width="400"/>
-  <img src="results/detection/F1_curve_small_clahe.png" width="300"/>
-  <img src="results/detection/P_curve_small_clahe.png" width="300"/>
-  <img src="results/detection/R_curve_small_clahe.png" width="300"/>  
-</p>
+YOLOv8.m
 
 <p align="center">
+  <img src="results/detection/clahe_det_medium_confusion_matrix_normalized.png" width="500"/>
   <img src="results/detection/F1_curve_medium_clahe.png" width="200"/>
   <img src="results/detection/P_curve_medium_clahe.png" width="200"/>
   <img src="results/detection/R_curve_medium_clahe.png" width="200"/>  
 </p>
+
 
 <p align="center">
   <img src="results/detection/val_batch0_labels.jpg" width="200"/>
