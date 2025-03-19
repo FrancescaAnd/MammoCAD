@@ -68,8 +68,8 @@ Here are the normalized confusion matrix, F1 curve, Precision curve, and Recall 
 This is an example of the prediction output of our detection model (bounding boxes and class probabilities) in comparison to the annotated images already present on the dataset
 
 <p>
-  <img src="results/detection/val_batch0_pred.jpg" width="500"/>
-  <img src="results/detection/val_batch0_labels.jpg" width="500"/>
+  <img src="results/detection/val_batch0_pred.jpg" width="450"/>
+  <img src="results/detection/val_batch0_labels.jpg" width="450"/>
 </p>
 
 
