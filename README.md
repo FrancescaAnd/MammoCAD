@@ -263,7 +263,7 @@ As shown, it is possible to choose to perform detection task using the augmented
     ```shell
       python main_det.py --mode train --model yolov8m.pt --data clahe --data_path "/home/francesca/Desktop" --epochs 70 --batch 4
      ```
-- For evaluating the system on the test set, use the following command
+- For evaluating the system on the test set, after training step take the weights folder inside `runs/detect/train` and put it into `detect` directory (the directory should be `runs/detect/weights/best.pt`) and then use the following command:
      ```shell
       python main_det.py --mode test --data_path /home/francesca/Desktop/mammography_cad
      ```
