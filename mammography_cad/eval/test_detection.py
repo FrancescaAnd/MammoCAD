@@ -16,7 +16,7 @@ def det_evaluate(
     print("Starting evaluation...")
 
     # Evaluate
-    results = model.val(data=data_yaml_path, device=device)
+    results = model.val(data=data_yaml_path, device=device, split='test')
 
     # Extract metrics dictionary
     metrics = results.results_dict
