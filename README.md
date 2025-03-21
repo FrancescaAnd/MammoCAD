@@ -297,7 +297,7 @@ For these purposes, run the `main_seg.py` script as follows
       python main_seg.py --mode train --model yolov8m-seg.pt --data clahe --data_path "/home/francesca/Desktop" --epochs 80 --batch 4    
     ```
     
-- For evaluating the system on the test set, use the following command
+- For evaluating the system on the test set, after training step take the weights folder inside `runs/segment/train` and put it into `segment` directory (the directory should be `runs/segment/weights/best.pt`) and then use the following command:
      ```shell
       python main_seg.py --mode test --data_path /home/francesca/Desktop/mammography_cad
      ```
