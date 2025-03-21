@@ -158,7 +158,8 @@ pip install -r requirements.txt
 
 ### Data collection 
 INbreast dataset is publicly avaiable at this link: https://www.kaggle.com/datasets/ramanathansp20/inbreast-dataset .
-Once you have downloaded and unzipped the data, you have to place inside data/raw/ repository the following folders/files:
+Once you have downloaded and unzipped the data, you have to add a `raw` folder and place it inside `data/` directory.\
+Then, you have to fill it with the following folders/files:
 - AllDICOMs
 - AllXML
 - INbreast.csv 
