@@ -17,9 +17,9 @@ if __name__ == "__main__":
     elif args.mode == "split":
         if args.data == "clahe":
             generate_pairs("data/processed/clahePNG/", "data/esrgan_data/LR", "data/esrgan_data/HR", scale=4)
-            split_dataset_esrgan(args.json_path, args.out_dir)
+            split_dataset_esrgan()
         elif args.mode == "augmented":
             generate_pairs("data/processed/augmentedPNG/", "data/esrgan_data/LR", "data/esrgan_data/HR", scale=4)
-            split_dataset_esrgan(args.json_path, args.out_dir)
+            split_dataset_esrgan()
     elif args.mode == "test":
         os.system("python eval/test_esrgan.py")
