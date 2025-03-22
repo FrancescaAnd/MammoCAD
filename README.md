@@ -323,7 +323,7 @@ The training results will be saved in `runs/segment/` directory
     ```
 - For validating the classification model, run the command below 
     ```shell
-    python main_class.py --mode eval
+    python main_class.py --mode val
     ```
   It provides
 - For evaluating the classification model on test set, run the command below 
@@ -348,7 +348,7 @@ As before, to specify which version of the dataset to use, include either `clahe
 
 - For validating the ESRGAN, run the following command
  ```shell
-    python main_esrgan.py --mode eval
+    python main_esrgan.py --mode val
  ```
 
 - For evaluating the ESRGAN on test set, run the following command
