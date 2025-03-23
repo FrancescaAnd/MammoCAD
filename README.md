@@ -16,6 +16,14 @@ The three main tasks are described below:
 2. *Mass Instance Segmentation (performed through YOLOv8)*
 3. *Mass Classification (Modified ResNet with binary input)*
 4. *Super-Resolution (ESRGAN)*
+
+| Stage                | Model            | Input                              | Output                                |
+|---------------------|------------------|------------------------------------|--------------------------------------|
+| Mass Detection       | YOLOv8           | PNG Images                         | Bounding Boxes                       |
+| Instance Segmentation| YOLOv8-Seg       | PNG + Contour-based masks          | Pixel-level masks                    |
+| Classification      | ResNet (2-ch)    | PNG + Segmentation Mask + BIRADS   | Benign/Malignant classification      |
+| Super-Resolution    | ESRGAN           | LR-HR Image Pairs                  | High-Resolution Enhanced Mammograms  |
+
    
 ### Abstract
 This project presents a Computer-Aided Detection and Diagnosis (CADe/CADx) system for mammogram analysis that integrates deep learning techniques for mass detection, segmentation and classification.  The system is trained and evaluated on the INBreast dataset which is particularly suitable for this purpose due to its high-resolution images and detailed ground truth annotations. Our proposed pipeline begins with a pre-processing stage in order to improve model robustness, this includes data augmentation techniques such as contrast enhancement, noise addition and CLAHE. Successively it exploits a YOLOv8-based mass detection and instance segmentation model and a ResNet-based classifier to differentiate between benign and malignant masses. An Enhanced Super-Resolution GAN (ESRGAN) was also implemented with the goal of improving fine detail preservation, which is crucial for detection, segmentation, and classification. While ESRGAN is not currently integrated into our CADe/CADx system, future iterations may explore its use as a pre-processing step to further improve performance.
