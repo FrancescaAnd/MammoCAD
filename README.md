@@ -17,12 +17,12 @@ The three main tasks are described below:
 3. *Mass Classification (Modified ResNet with binary input)*
 4. *Super-Resolution (ESRGAN)*
 
-| Stage                | Model            | Input                              | Output                                |
-|---------------------|------------------|------------------------------------|--------------------------------------|
-| Mass Detection       | YOLOv8           | PNG Images                         | Bounding Boxes                       |
-| Instance Segmentation| YOLOv8-Seg       | PNG + Contour-based masks          | Pixel-level masks                    |
-| Classification      | ResNet (2-ch)    | PNG + Segmentation Mask + BIRADS   | Benign/Malignant classification      |
-| Super-Resolution    | ESRGAN           | LR-HR Image Pairs                  | High-Resolution Enhanced Mammograms  |
+| Stage                | Model              | Input                              | Output                                |
+|----------------------|--------------------|------------------------------------|--------------------------------------|
+| Mass Detection       | YOLOv8             | PNG Images                         | Bounding Boxes                       |
+| Instance Segmentation| YOLOv8-Seg         | PNG + Contour-based masks          | Pixel-level masks                    |
+| Classification       | ResNet (2-channels)| PNG + Segmentation Mask + BIRADS   | Benign/Malignant classification      |
+| Super-Resolution     | ESRGAN             | LR-HR Image Pairs                  | High-Resolution Enhanced Mammograms  |
 
    
 ### Abstract
