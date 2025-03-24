@@ -1,0 +1,31 @@
+Test results:
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 
+                   all        124       1056      0.801      0.739      0.739      0.434
+                  Mass         46         51      0.888      0.804      0.868      0.633
+         Calcification         79        998      0.932      0.152      0.275      0.155
+            Distortion          1          1      0.756          1      0.995      0.415
+     Spiculated Region          6          6      0.628          1      0.819      0.532
+
+
+Precision: 0.8011
+Recall: 0.7390
+mAP@50: 0.7391
+mAP@50-95: 0.4338
+F1 Score: 0.7688
+
+
+Validation results:
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 
+                   all        122        812      0.889       0.46      0.573      0.396
+                  Mass         44         49      0.928      0.837      0.903      0.702
+         Calcification         63        756      0.921      0.169      0.287      0.165
+            Distortion          3          3      0.719      0.333      0.359       0.21
+     Spiculated Region          4          4      0.987        0.5      0.745      0.508
+
+
+Precision: 0.8887
+Recall: 0.4599
+mAP@50: 0.5735
+mAP@50-95: 0.3961
+F1 Score: 0.6061
+
