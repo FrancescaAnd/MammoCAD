@@ -98,18 +98,18 @@ This is an example of the prediction output of our segmentation model (per insta
 </p>
 
 ### Detection and segmentation models evaluation
-An example of output deriving from the evaluation on test sets either on detection and instance segmentation is provided in the `det_seg_test_results/` directory (`val_det`, `valseg` respectively). Specifically:
-- Detection is performed using pre-trained model YOLOv8s
+Results deriving from validation and test on detection and instance segmentation is provided in the `det_seg_results/` directory (`det_medium`, `seg_medium` respectively). Specifically:
+- Detection is performed using pre-trained model YOLOv8m
   
 | Metric       | Precision | Recall | mAP@50 | mAP@50-95 | F1 Score |
 |-------------|-----------|--------|-------|----------|---------|
-| **Value**   | 86.94%    | 46.32% | 57.72% | 35.38%   | 60.44%  |
+| **Val**   | 88.87%    | 45.99% | 57.35% | 39.61%   | 60.61%  |
 
 - Instance Segmentation is performed using pre-trained YOLOv8m
   
 | Metric       | Precision | Recall | mAP@50 | mAP@50-95 | F1 Score |
 |-------------|-----------|--------|-------|----------|---------|
-| **Value**   | 79.21%    | 40.51% | 62.54% | 40.97%   | 53.61%  |
+| **Val**   | 79.21%    | 40.51% | 62.54% | 40.97%   | 53.61%  |
 
 
 ### Classification
