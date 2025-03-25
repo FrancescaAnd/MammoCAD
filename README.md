@@ -116,8 +116,8 @@ Results deriving from validation and test on detection and instance segmentation
 
 | Metric    | Accuracy | Precision | Recall | F1 Score |
 |-----------|----------|-----------|--------|----------|
-| **Val (%)** | 96.22%   | 93.75%    | 97.40% | 95.54%   |
-| **Test (%)** | 96.76%   | 95.89%    | 95.89% | 95.89%   |
+| **Val (%)** | 96.20% | 92.68%    | 98.70% | 95.60%   |
+| **Test (%)** | 97.84% | 94.81%   | 99.78% | 97.33%   |
 
 
 ### Image enhancement with ESRGAN
